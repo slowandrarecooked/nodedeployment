@@ -9,7 +9,9 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
   res.send({ about: "about us..." });
 });
-
+app.get("/contact", (req, res) => {
+  res.send({ about: `contact me at ${process.env.EMAIL}` });
+});
 app.listen(PORT, () => {
   console.log("server started on 8000");
 });
